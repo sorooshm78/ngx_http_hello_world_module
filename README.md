@@ -1,7 +1,8 @@
 # ngx_http_hello_world_module
 
-## How to build the module:
+[document for read](https://tejgop.github.io/nginx-module-guide/)
 
+## How to build the module:
 ```
 $ ./configure \
 > --prefix=/where/i/want/to/install/nginx \
