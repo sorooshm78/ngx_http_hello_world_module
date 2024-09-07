@@ -20,3 +20,24 @@ $ make install
 $ make modules
 $ cp objs/ngx_http_hello_world_module.so <nginx_install_location>/modules
 ```
+
+## Nginx config
+```
+load_module "modules/ngx_http_hello_world_module.so"
+
+http {
+  server {
+    listen 80;
+    server_name localhost;
+    
+	location / {
+      root  html;
+      index index.html;
+    }
+    
+	location /test {
+      print_hello_world;
+    }
+  }
+}
+```
